@@ -18,7 +18,7 @@ public class TheCoinFlipChallenge {
 		for(int i=0;i<=5;i++) {
 			Random random=new Random();
 			int rand=random.nextInt(2);
-			System.out.println(rand);
+	
 			System.out.println("Heads or Tails?");
 			String answer2=obj.nextLine().toLowerCase();
 			if(rand==1&&answer2.equals("heads")) {
