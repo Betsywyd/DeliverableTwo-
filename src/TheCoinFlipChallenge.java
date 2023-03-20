@@ -10,7 +10,7 @@ public class TheCoinFlipChallenge {
      String name=obj.nextLine();
      System.out.println("Welcome "+name+". Do you want to do the COIN FLIP CHALLENGE? Yes/No");
      String answer1=obj.nextLine().toLowerCase();
-     int score=0,j=0;
+     int score=0;
 	 if(answer1.equals("no")) {
 		 System.out.println("You are a coward "+name);
 	 }else if (answer1.equals("yes")){
@@ -18,12 +18,18 @@ public class TheCoinFlipChallenge {
 		for(int i=0;i<=5;i++) {
 			Random random=new Random();
 			int rand=random.nextInt(2);
-			
+			System.out.println(rand);
 			System.out.println("Heads or Tails?");
 			String answer2=obj.nextLine().toLowerCase();
-			String result=(rand==1&&answer2.equals("heads"))? "Correct!" : "Wrong!";
-			System.out.println(result);
-			score=(result.toLowerCase().equals("correct!"))? j++ : j;	
+			if(rand==1&&answer2.equals("heads")) {
+				System.out.println("Correct!");
+				score++;
+			}else if(rand==0&&answer2.equals("tails")) {
+				System.out.println("Correct!");
+				score++;
+			}else {
+				System.out.println("Wrong!");
+			}
 		}
 		System.out.println("Thank you "+name+". You got a score of "+score+"!");
 		}
