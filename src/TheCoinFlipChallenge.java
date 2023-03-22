@@ -10,12 +10,12 @@ public class TheCoinFlipChallenge {
      String name=obj.nextLine();
      System.out.println("Welcome "+name+". Do you want to do the COIN FLIP CHALLENGE? Yes/No");
      String answer1=obj.nextLine().toLowerCase();
-     int score=0;
+     float score=0;
 	 if(answer1.equals("no")) {
 		 System.out.println("You are a coward "+name);
 	 }else if (answer1.equals("yes")){
 		 
-		for(int i=0;i<=5;i++) {
+		for(int i=0;i<5;i++) {
 			Random random=new Random();
 			int rand=random.nextInt(2);
 	
@@ -31,7 +31,9 @@ public class TheCoinFlipChallenge {
 				System.out.println("Wrong!");
 			}
 		}
+		float accuracy=score/5;
 		System.out.println("Thank you "+name+". You got a score of "+score+"!");
+		System.out.println("You accuracy is "+(int)(accuracy*100)+"%"+"!");
 		}
 		
 	}
